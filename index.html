@@ -12,6 +12,16 @@
             padding: 0;
             box-sizing: border-box;
         }
+        <script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(() => {
+slides[index].classList.remove("active");
+index = (index + 1) % slides.length;
+slides[index].classList.add("active");
+}, 3000);
+</script>
 
         body {
             font-family: 'Inter', sans-serif;
@@ -214,6 +224,35 @@ frameborder="0" allowfullscreen></iframe>
             text-decoration: none;
             margin: 0 10px;
         }
+        .slider {
+max-width:400px;
+margin:auto;
+overflow:hidden;
+text-align:center;
+}
+
+.slide {
+display:none;
+background:#152940;
+padding:20px;
+border-radius:12px;
+}
+
+.slide img {
+width:60px;
+border-radius:50%;
+margin-bottom:10px;
+border:2px solid #d4a34d;
+}
+
+.slide.active {
+display:block;
+}
+
+.slide h4 {
+margin:10px 0;
+color:#d4a34d;
+}
         /* --- CSS END --- */
     </style>
 </head>
@@ -266,93 +305,53 @@ frameborder="0" allowfullscreen></iframe>
     <section class="testimonials">
 <h2>Client Trust & Global Experiences</h2>
 
-<!-- 🇮🇳 Indian Clients -->
+<div class="slider">
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/men/45.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Rajiv Sharma</div>
-<div class="author-desc">Businessman, Gurugram</div>
-</div>
-</div>
-<p class="testi-text">
-Vishal and his team handled our large land acquisition with extreme professionalism. Their deep market insight and ability to speed up the process was extraordinary.
-</p>
+<div class="slide active">
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+<h4>Rajiv Sharma (Gurugram)</h4>
+<p>Vishal and his team handled our large land acquisition with extreme professionalism. Their deep market insight and ability to speed up the process was extraordinary.</p>
 </div>
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/women/68.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Neeru Singh</div>
-<div class="author-desc">Hotel Operator, Delhi</div>
-</div>
-</div>
-<p class="testi-text">
-The expertise in hotel and commercial projects helped us make the right decisions. They are timely, clear, and result-oriented.
-</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/women/68.jpg">
+<h4>Neeru Singh (Delhi)</h4>
+<p>The expertise in hotel and commercial projects helped us make the right decisions. They are timely, clear, and result-oriented.</p>
 </div>
 
-<!-- 🌍 International Clients -->
-
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/men/11.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Michael Anderson</div>
-<div class="author-desc">Investor, Dubai</div>
-</div>
-</div>
-<p class="testi-text">Outstanding expertise in luxury real estate. Their global network helped us secure a premium commercial asset.</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/men/11.jpg">
+<h4>Michael Anderson (Dubai)</h4>
+<p>Outstanding expertise in luxury real estate. Their global network helped us secure a premium commercial asset.</p>
 </div>
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/women/22.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Sophia Williams</div>
-<div class="author-desc">Real Estate Investor, London</div>
-</div>
-</div>
-<p class="testi-text">Highly professional team with deep knowledge of international property markets. Seamless experience.</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/women/22.jpg">
+<h4>Sophia Williams (London)</h4>
+<p>Highly professional team with deep knowledge of international property markets. Seamless experience.</p>
 </div>
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/men/33.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">James Rodriguez</div>
-<div class="author-desc">Business Owner, Singapore</div>
-</div>
-</div>
-<p class="testi-text">Exceptional service and trustworthy advice in high-value transactions. Truly world-class.</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/men/33.jpg">
+<h4>James Rodriguez (Singapore)</h4>
+<p>Exceptional service and trustworthy advice in high-value transactions. Truly world-class.</p>
 </div>
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/women/44.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Olivia Brown</div>
-<div class="author-desc">Entrepreneur, New York</div>
-</div>
-</div>
-<p class="testi-text">Their understanding of premium property markets is unmatched. Highly recommended for luxury investments.</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<h4>Olivia Brown (New York)</h4>
+<p>Their understanding of premium property markets is unmatched. Highly recommended for luxury investments.</p>
 </div>
 
-<div class="testi-card">
-<div class="testi-author">
-<img src="https://randomuser.me/api/portraits/men/55.jpg" width="50" style="border-radius:50%;">
-<div>
-<div class="author-name">Daniel Schmidt</div>
-<div class="author-desc">Investor, Germany</div>
-</div>
-</div>
-<p class="testi-text">Reliable, transparent, and extremely efficient in handling large-scale deals across borders.</p>
+<div class="slide">
+<img src="https://randomuser.me/api/portraits/men/55.jpg">
+<h4>Daniel Schmidt (Germany)</h4>
+<p>Reliable, transparent, and extremely efficient in handling large-scale deals across borders.</p>
 </div>
 
-    </section>
+</div>
 
+</section>
     <footer>
         <section style="padding:50px 5%; text-align:center;">
 <h2>Contact Us</h2>
