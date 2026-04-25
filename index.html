@@ -1,125 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lohan & Group's</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lohan & Group's | Premium Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS START --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-body {margin:0;font-family:Arial;background:#f5f5f5;}
-header {background:#000;color:#fff;padding:15px;text-align:center;}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b1e33; /* Dark Navy Blue theme */
+            color: #ffffff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-.hero {
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
-height:90vh;color:white;display:flex;flex-direction:column;
-justify-content:center;align-items:center;text-align:center;
-}
-.hero h1 {font-size:45px;}
-.btn {background:#gold;color:black;padding:12px 25px;text-decoration:none;border-radius:5px;}
+        header {
+            padding: 15px 5%;
+            background: #0b1e33;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
 
-.section {padding:50px 20px;text-align:center;}
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
 
-.services, .gallery, .reviews {
-display:flex;flex-wrap:wrap;gap:20px;justify-content:center;
-}
+        .call-btn-top {
+            background: #d4a34d;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+        }
 
-.card {
-background:white;width:260px;padding:20px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-border-radius:10px;
-}
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(11, 30, 51, 0.8), rgba(11, 30, 51, 0.8)), 
+                        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.gallery img {
-width:300px;height:200px;object-fit:cover;border-radius:10px;
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-footer {background:#000;color:white;padding:20px;text-align:center;}
+        .btn-gold {
+            background: #d4a34d;
+            color: #000;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
 
-.whatsapp {
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;padding:15px;
-border-radius:50%;text-decoration:none;
-}
+        /* Sections Styling */
+        .section {
+            padding: 80px 5%;
+            text-align: center;
+        }
 
-.call {
-position:fixed;bottom:80px;right:20px;
-background:#007bff;color:white;padding:15px;
-border-radius:50%;text-decoration:none;
-}
-</style>
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #d4a34d;
+        }
+
+        /* Reviews Grid */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background: #152940;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: left;
+            border-bottom: 3px solid #d4a34d;
+            transition: transform 0.3s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stars {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .client-name {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #d4a34d;
+        }
+
+        /* Contact Info */
+        .contact-box {
+            background: #152940;
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-box p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* Floating Buttons */
+        .floating-btn {
+            position: fixed;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .wa-float { bottom: 20px; background: #25D366; }
+        .call-float { bottom: 85px; background: #007bff; }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* --- CSS END --- */
+    </style>
 </head>
-
 <body>
 
-<header>
-<h2>Lohan & Group's</h2>
-</header>
+    <header>
+        <div class="logo">Lohan & Group's</div>
+        <a href="tel:919910329182" class="call-btn-top">Call Now</a>
+    </header>
 
-<section class="hero">
-<h1>Luxury Real Estate Solutions</h1>
-<p>Trusted Property Deals Across India & International</p>
-<a href="#contact" class="btn">Get in Touch</a>
-</section>
+    <section class="hero">
+        <h1>Luxury Real Estate Solutions</h1>
+        <p>Trusted Property Deals Across India & International Markets</p>
+        <div>
+            <a href="#contact" class="btn-gold">Get in Touch</a>
+        </div>
+    </section>
 
-<section class="section">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">Residential Properties</div>
-<div class="card">Commercial Deals</div>
-<div class="card">Plots & Land Investment</div>
-<div class="card">Luxury Villas</div>
-</div>
-</section>
+    <section class="section">
+        <h2>What Our Clients Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Very professional and trustworthy service."</p>
+                <span class="client-name">- Ravi Sharma (Delhi)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Best property dealer I have worked with."</p>
+                <span class="client-name">- Amit Singh (UP)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Smooth and quick deal experience."</p>
+                <span class="client-name">- Neha Verma (Punjab)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Excellent investment guidance."</p>
+                <span class="client-name">- Raj Patel (Gujarat)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Honest and reliable team."</p>
+                <span class="client-name">- Imran Khan (Mumbai)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Highly recommended for large deals."</p>
+                <span class="client-name">- Sandeep Yadav (Haryana)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Very supportive and professional throughout."</p>
+                <span class="client-name">- Priya Nair (Kerala)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Great service and full transparency."</p>
+                <span class="client-name">- Karan Mehta (Rajasthan)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Best deal closed in a very short time."</p>
+                <span class="client-name">- Anil Kumar (Bihar)</span>
+            </div>
+            <div class="review-card">
+                <span class="stars">★★★★★</span>
+                <p>"Good communication and reliable service."</p>
+                <span class="client-name">- Rohit Das (West Bengal)</span>
+            </div>
+        </div>
+    </section>
 
-<section class="section">
-<h2>Featured Properties</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
-<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-</div>
-</section>
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-box">
+            <p><strong>📞 Phone:</strong> +91 9910329182</p>
+            <p><strong>📍 Address:</strong> Faridabad Bypass, South Delhi, Near Badarpur</p>
+            <p>Expert guidance for Residential, Commercial, and Land Investments.</p>
+        </div>
+    </section>
 
-<section class="section">
-<h2>Client Reviews</h2>
-<div class="reviews">
+    <footer>
+        <p>© 2026 Lohan & Group's. All rights reserved.</p>
+    </footer>
 
-<div class="card">⭐ Ravi Sharma (Delhi) – Very professional and trustworthy service.</div>
-<div class="card">⭐ Amit Singh (UP) – Best property dealer I have worked with.</div>
-<div class="card">⭐ Neha Verma (Punjab) – Smooth and quick deal experience.</div>
-<div class="card">⭐ Raj Patel (Gujarat) – Excellent investment guidance.</div>
-<div class="card">⭐ Imran Khan (Mumbai) – Honest and reliable team.</div>
-<div class="card">⭐ Sandeep Yadav (Haryana) – Highly recommended.</div>
-<div class="card">⭐ Priya Nair (Kerala) – Very supportive and professional.</div>
-<div class="card">⭐ Karan Mehta (Rajasthan) – Great service and transparency.</div>
-<div class="card">⭐ Anil Kumar (Bihar) – Best deal in short time.</div>
-<div class="card">⭐ Rohit Das (West Bengal) – Good communication and service.</div>
-
-</div>
-</section>
-
-<section class="section">
-<h2>Contact Us</h2>
-<p>📞 9910329182</p>
-<p>📍 Faridabad Bypass, South Delhi, Near Badarpur</p>
-
-<form>
-<input type="text" placeholder="Your Name" required><br><br>
-<input type="tel" placeholder="Your Phone" required><br><br>
-<textarea placeholder="Your Requirement"></textarea><br><br>
-<button type="submit">Submit Inquiry</button>
-</form>
-
-<iframe src="https://maps.google.com/maps?q=badarpur%20delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300"></iframe>
-</section>
-
-<footer>
-<p>© 2026 Lohan & Group's</p>
-</footer>
-
-<a href="https://wa.me/919910329182" class="whatsapp">💬</a>
-<a href="tel:919910329182" class="call">📞</a>
+    <a href="tel:919910329182" class="floating-btn call-float">📞</a>
+    <a href="https://wa.me/919910329182" class="floating-btn wa-float">💬</a>
 
 </body>
 </html>
