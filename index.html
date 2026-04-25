@@ -4,259 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lohan & Group's | Premium Real Estate</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- CSS START --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b1e33; /* Dark Navy Blue theme */
-            color: #ffffff;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            padding: 15px 5%;
-            background: #0b1e33;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-        }
-
-        .call-btn-top {
-            background: #d4a34d;
-            border: none;
-            padding: 10px 22px;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            color: #000;
-            text-decoration: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 5%;
-            text-align: center;
-            background: linear-gradient(rgba(11, 30, 51, 0.8), rgba(11, 30, 51, 0.8)), 
-                        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=1200&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .btn-gold {
-            background: #d4a34d;
-            color: #000;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        /* Sections Styling */
-        .section {
-            padding: 80px 5%;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #d4a34d;
-        }
-
-        /* Reviews Grid */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .review-card {
-            background: #152940;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: left;
-            border-bottom: 3px solid #d4a34d;
-            transition: transform 0.3s;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stars {
-            color: #ffcc00;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .client-name {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-            color: #d4a34d;
-        }
-
-        /* Contact Info */
-        .contact-box {
-            background: #152940;
-            padding: 40px;
-            border-radius: 15px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-box p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        /* Floating Buttons */
-        .floating-btn {
-            position: fixed;
-            right: 20px;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        .wa-float { bottom: 20px; background: #25D366; }
-        .call-float { bottom: 85px; background: #007bff; }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            border-top: 1px solid #222;
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        /* --- CSS END --- */
-    </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Lohan & Group's</div>
-        <a href="tel:919910329182" class="call-btn-top">Call Now</a>
+        <nav>
+            <div class="logo">Lohan & Group's</div>
+            <button class="cta-btn-top">Call Now</button>
+        </nav>
     </header>
 
     <section class="hero">
-        <h1>Luxury Real Estate Solutions</h1>
-        <p>Trusted Property Deals Across India & International Markets</p>
-        <div>
-            <a href="#contact" class="btn-gold">Get in Touch</a>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>What Our Clients Say</h2>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Very professional and trustworthy service."</p>
-                <span class="client-name">- Ravi Sharma (Delhi)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Best property dealer I have worked with."</p>
-                <span class="client-name">- Amit Singh (UP)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Smooth and quick deal experience."</p>
-                <span class="client-name">- Neha Verma (Punjab)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Excellent investment guidance."</p>
-                <span class="client-name">- Raj Patel (Gujarat)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Honest and reliable team."</p>
-                <span class="client-name">- Imran Khan (Mumbai)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Highly recommended for large deals."</p>
-                <span class="client-name">- Sandeep Yadav (Haryana)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Very supportive and professional throughout."</p>
-                <span class="client-name">- Priya Nair (Kerala)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Great service and full transparency."</p>
-                <span class="client-name">- Karan Mehta (Rajasthan)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Best deal closed in a very short time."</p>
-                <span class="client-name">- Anil Kumar (Bihar)</span>
-            </div>
-            <div class="review-card">
-                <span class="stars">★★★★★</span>
-                <p>"Good communication and reliable service."</p>
-                <span class="client-name">- Rohit Das (West Bengal)</span>
+        <div class="overlay">
+            <h1>Premium Properties in India and Worldwide</h1>
+            <p>Lohan & Group's specializes in high-value transactions, large-scale land acquisition, and premier commercial properties.</p>
+            <div class="hero-btns">
+                <button class="btn-gold">View All Services</button>
+                <button class="btn-white">Call for Consultation</button>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <div class="contact-box">
-            <p><strong>📞 Phone:</strong> +91 9910329182</p>
-            <p><strong>📍 Address:</strong> Faridabad Bypass, South Delhi, Near Badarpur</p>
-            <p>Expert guidance for Residential, Commercial, and Land Investments.</p>
+    <section class="stats">
+        <h2>Key Achievements of Lohan & Group's in Global Market</h2>
+        <p>Leading high-value real estate deals from thousands of acres of land to premium commercial properties.</p>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>1000+</h3>
+                <p>Acres Land Deals</p>
+                <span>Expert management in large-scale land acquisition and sales.</span>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Commercial Properties</p>
+                <span>Malls, Hotels, Restaurants, Schools, and Institutional Buildings.</span>
+            </div>
+            <div class="stat-item">
+                <h3>20+</h3>
+                <p>Years of Experience</p>
+                <span>Reliable real estate services in New Delhi and across India.</span>
+            </div>
+            <div class="stat-item">
+                <h3>15+</h3>
+                <p>Country Expansion</p>
+                <span>Strong presence of Lohan & Group's in international markets.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Client Testimonials</h2>
+        <div class="testimonial-card">
+            <p>"The team handled our large land acquisition with extreme professionalism. Their deep market insight was extraordinary."</p>
+            <div class="client-info">
+                <strong>Rajiv Sharma</strong>
+                <span>Businessman, Gurugram</span>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p>"The expertise in hotel and commercial projects helped us make the right decisions. They are result-oriented and clear."</p>
+            <div class="client-info">
+                <strong>Neeru Singh</strong>
+                <span>Hotel Operator, Delhi</span>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Lohan & Group's. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <p>© 2026 Lohan & Group's. All Rights Reserved.</p>
+        <div class="legal">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
     </footer>
-
-    <a href="tel:919910329182" class="floating-btn call-float">📞</a>
-    <a href="https://wa.me/919910329182" class="floating-btn wa-float">💬</a>
 
 </body>
 </html>
