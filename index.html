@@ -6,26 +6,25 @@
 <title>Lohan & Group's</title>
 
 <style>
-body {margin:0;font-family:Arial;}
-header {background:#111;color:white;padding:15px;text-align:center;}
+body {margin:0;font-family:Arial;background:#f5f5f5;}
+header {background:#000;color:#fff;padding:15px;text-align:center;}
 
 .hero {
-background:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center/cover;
+background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center/cover;
 height:90vh;color:white;display:flex;flex-direction:column;
 justify-content:center;align-items:center;text-align:center;
 }
-
 .hero h1 {font-size:45px;}
-.btn {background:#ff6600;color:white;padding:12px 25px;text-decoration:none;border-radius:5px;}
+.btn {background:#gold;color:black;padding:12px 25px;text-decoration:none;border-radius:5px;}
 
 .section {padding:50px 20px;text-align:center;}
 
-.services, .gallery {
+.services, .gallery, .reviews {
 display:flex;flex-wrap:wrap;gap:20px;justify-content:center;
 }
 
 .card {
-width:250px;padding:20px;
+background:white;width:260px;padding:20px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 border-radius:10px;
 }
@@ -34,13 +33,18 @@ border-radius:10px;
 width:300px;height:200px;object-fit:cover;border-radius:10px;
 }
 
-footer {background:#111;color:white;padding:20px;text-align:center;}
+footer {background:#000;color:white;padding:20px;text-align:center;}
 
 .whatsapp {
 position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%;
-font-size:20px;text-decoration:none;
+background:#25D366;color:white;padding:15px;
+border-radius:50%;text-decoration:none;
+}
+
+.call {
+position:fixed;bottom:80px;right:20px;
+background:#007bff;color:white;padding:15px;
+border-radius:50%;text-decoration:none;
 }
 </style>
 </head>
@@ -52,28 +56,23 @@ font-size:20px;text-decoration:none;
 </header>
 
 <section class="hero">
-<h1>Premium Real Estate Solutions</h1>
-<p>Buy, Sell & Invest in Trusted Properties</p>
-<a href="#contact" class="btn">Contact Now</a>
-</section>
-
-<section class="section">
-<h2>About Us</h2>
-<p>We deal in all types of properties including residential, commercial, plots and investments across India and international locations.</p>
+<h1>Luxury Real Estate Solutions</h1>
+<p>Trusted Property Deals Across India & International</p>
+<a href="#contact" class="btn">Get in Touch</a>
 </section>
 
 <section class="section">
 <h2>Our Services</h2>
 <div class="services">
-<div class="card">Property Buying</div>
-<div class="card">Property Selling</div>
+<div class="card">Residential Properties</div>
 <div class="card">Commercial Deals</div>
-<div class="card">Land Investment</div>
+<div class="card">Plots & Land Investment</div>
+<div class="card">Luxury Villas</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Property Gallery</h2>
+<h2>Featured Properties</h2>
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4">
 <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
@@ -82,14 +81,34 @@ font-size:20px;text-decoration:none;
 </section>
 
 <section class="section">
-<h2>Our Locations</h2>
-<p>Delhi NCR | Dubai | Bangalore | Indonesia | Qatar</p>
+<h2>Client Reviews</h2>
+<div class="reviews">
+
+<div class="card">⭐ Ravi Sharma (Delhi) – Very professional and trustworthy service.</div>
+<div class="card">⭐ Amit Singh (UP) – Best property dealer I have worked with.</div>
+<div class="card">⭐ Neha Verma (Punjab) – Smooth and quick deal experience.</div>
+<div class="card">⭐ Raj Patel (Gujarat) – Excellent investment guidance.</div>
+<div class="card">⭐ Imran Khan (Mumbai) – Honest and reliable team.</div>
+<div class="card">⭐ Sandeep Yadav (Haryana) – Highly recommended.</div>
+<div class="card">⭐ Priya Nair (Kerala) – Very supportive and professional.</div>
+<div class="card">⭐ Karan Mehta (Rajasthan) – Great service and transparency.</div>
+<div class="card">⭐ Anil Kumar (Bihar) – Best deal in short time.</div>
+<div class="card">⭐ Rohit Das (West Bengal) – Good communication and service.</div>
+
+</div>
 </section>
 
-<section class="section" id="contact">
+<section class="section">
 <h2>Contact Us</h2>
 <p>📞 9910329182</p>
 <p>📍 Faridabad Bypass, South Delhi, Near Badarpur</p>
+
+<form>
+<input type="text" placeholder="Your Name" required><br><br>
+<input type="tel" placeholder="Your Phone" required><br><br>
+<textarea placeholder="Your Requirement"></textarea><br><br>
+<button type="submit">Submit Inquiry</button>
+</form>
 
 <iframe src="https://maps.google.com/maps?q=badarpur%20delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
 width="100%" height="300"></iframe>
@@ -100,6 +119,7 @@ width="100%" height="300"></iframe>
 </footer>
 
 <a href="https://wa.me/919910329182" class="whatsapp">💬</a>
+<a href="tel:919910329182" class="call">📞</a>
 
 </body>
 </html>
